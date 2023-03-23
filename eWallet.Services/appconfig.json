@@ -1,0 +1,16 @@
+{
+  "exclude": [
+    "**/bin",
+    "**/bower_components",
+    "**/jspm_packages",
+    "**/node_modules",
+    "**/obj",
+    "**/platforms"
+  ],
+  "QRCode": {
+    "link": ""
+  },
+  "appSetting": {
+    "IronBarCode.LicenseKey": "IRONBARCODE-MYLICENSE-KEY-1EF01"
+  }
+}

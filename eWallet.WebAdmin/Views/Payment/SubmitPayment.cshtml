@@ -1,0 +1,38 @@
+﻿@model eWallet.WebAdmin.Services.Pay.Dtos.ParamInfo
+
+@{
+    ViewData["Title"] = "SubmitPayment";
+}
+
+<h1>SubmitPayment</h1>
+
+<h4>ParamInfo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SubmitPayment">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TransId" class="control-label"></label>
+                <input asp-for="TransId" class="form-control" />
+                <span asp-validation-for="TransId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatusCode" class="control-label"></label>
+                <input asp-for="StatusCode" class="form-control" />
+                <span asp-validation-for="StatusCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
